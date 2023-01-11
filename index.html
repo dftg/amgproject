@@ -117,6 +117,14 @@ body {
 .collapsed + .main-content {
   margin-left: 60px;
 }
+.logoblock {
+  height: 89px;
+}
+
+.hrlogo {
+  margin: 30px 0px 0px 25px;
+}
+
 </style>
 <script>
     $('.btn-expand-collapse').click(function(e) {
@@ -127,7 +135,7 @@ body {
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-<!-- <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
+nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
     <div class="container-fluid">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -145,10 +153,13 @@ body {
         </ul>
       </div>/.nav-collapse
     </div>
-  </nav> -->
+  </nav>
 <nav class="navbar-primary">
 <a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
-<ul class="navbar-primary-menu">
+<div class="logoblock">
+  <img class="hrlogo" src = "images\AMG_2013_4C_logoHR.png">
+</div>
+  <ul class="navbar-primary-menu">
   <li>
     <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Dashboard</span></a>
     <a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">Profile</span></a>
