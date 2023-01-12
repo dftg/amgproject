@@ -1,177 +1,225 @@
-<html>
+<html lang="en"><link type="text/css" rel="stylesheet" id="dark-mode-custom-link"><link type="text/css" rel="stylesheet" id="dark-mode-general-link"><style lang="en" type="text/css" id="dark-mode-custom-style"></style><style lang="en" type="text/css" id="dark-mode-native-style"></style><style lang="en" type="text/css" id="dark-mode-native-sheet"></style>
 <head>
 
-  <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/3fec6e2397.js" crossorigin="anonymous"></script>
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-<style>
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-body {
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
-}
-
-.navbar-global {
-  background-color: indigo;
-}
-
-.navbar-global .navbar-brand {
-  color: white;
-}
-
-.navbar-global .navbar-user > li > a
-{
-  color: white;
-}
-
-.navbar-primary {
-  background-color: #333;
-  height: 100%;
-  left: 0px;
-  position: absolute;
-  /* top: 51px; */
-  width: 200px;
-  z-index: 8;
-  overflow: hidden;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.navbar-primary.collapsed {
-  width: 60px;
-}
-
-.navbar-primary.collapsed .glyphicon {
-  font-size: 22px;
-}
-
-.navbar-primary.collapsed .nav-label {
-  display: none;
-}
-
-.btn-expand-collapse {
-    position: absolute;
-    display: block;
-    left: 0px;
-    bottom:0;
-    width: 100%;
-    border-top:solid 1px #666;
-    color: grey;
-    font-size: 20px;
-    text-align: center;
-}
-
-.btn-expand-collapse:hover,
-.btn-expand-collapse:focus {
-    background-color: #222;
+    <title>David Stevens' AMG interview project</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    
+  <style>
+  .navbar-global {
+    background-color: indigo;
+  }
+  
+  .navbar-global .navbar-brand {
     color: white;
+  }
+  
+  .navbar-global .navbar-user > li > a
+  {
+    color: white;
+  }
+  
+  .navbar-primary {
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 250px;
+    z-index: 2;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    border-right: 2px solid #A7DCF5;
+  }
+  
+  .navbar-primary.collapsed {
+    width: 70px;
+  }
+  
+  .navbar-primary.collapsed .glyphicon {
+    font-size: 22px;
+  }
+  
+  .navbar-primary.collapsed .nav-label, .navbar-primary.collapsed .userinfotext {
+    display: none;
+  }
+  
+  .btn-expand-collapse {
+      position: absolute;
+      display: block;
+      left: 0px;
+      width: 100%;
+      color: #3383A8;
+      font-size: 20px;
+      text-align: center;      
+  }
+  
+  /* .btn-expand-collapse:hover,
+  .btn-expand-collapse:focus {
+      background-color: #222;
+      color: white;
+  }
+  
+  .btn-expand-collapse:active {
+      background-color: #111;
+  } */
+  
+  .navbar-primary-menu,
+  .navbar-primary-menu li {
+    margin:0; padding:0;
+    list-style: none;
+  }
+  
+  .navbar-primary-menu li a {
+    display: block;
+    padding: 0 0 0 20px;
+    text-align: left;
+    height: 44px;
+  }
+
+  .userinfobox {
+    display: block;
+    padding-left: 20px;
+    text-align: left;
+    position: absolute;
+    bottom: 20px;
+  }
+
+  .userinfoitem {
+    padding-bottom: 15px;
+  }
+
+  a.userinfoitem{
+    text-decoration: underline;
+  }
+  
+  .userinfoboxicon {
+    padding-bottom: 15px;
+    display: block;
+  }
+
+  .userinfoboxicon:hover {
+    text-decoration: none;
+  }
+
+  .userinfoname {
+    color: #46B3E5;
+    font-weight: bold;
+  }
+
+  i.fa-solid.fa-circle-user {
+    font-size: 30px;
+  }
+
+  /* .navbar-primary-menu li a:hover {
+    background-color: #000;
+    text-decoration: none;
+    color: white;
+  } */
+  
+  .navbar-primary-menu li a .glyphicon {
+    margin-right: 6px;
+  }
+  
+  .navbar-primary-menu li a:hover .glyphicon {
+    color: orchid;
+  }
+  
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  
+  .collapsed + .main-content {
+    margin-left: 60px;
+  }
+
+  .hrlogo {
+    margin: 26px 12px 19px 10px;
+  }  
+
+  .btn-expand-collapse {
+    height: 22px;
+  }
+
+  .btn-container {
+    height: 22px;
+    margin-bottom: 6px;
+  }
+
+ .fa-circle-chevron-right {
+    line-height: 21px;
+    position: absolute;
+    right: 0px;
+    transform: translateX(50%);
+    z-index: 2;
+    background: white; 
+ }
+
+ {
+
 }
 
-.btn-expand-collapse:active {
-    background-color: #111;
-}
-
-.navbar-primary-menu,
-.navbar-primary-menu li {
-  margin:0; padding:0;
-  list-style: none;
-}
-
-.navbar-primary-menu li a {
-  display: block;
-  padding: 10px 18px;
-  text-align: left;
-  border-bottom:solid 1px #444;
-  color: #ccc;
-}
-
-.navbar-primary-menu li a:hover {
-  background-color: #000;
-  text-decoration: none;
-  color: white;
-}
-
-.navbar-primary-menu li a .glyphicon {
-  margin-right: 6px;
-}
-
-.navbar-primary-menu li a:hover .glyphicon {
-  color: orchid;
-}
-
-.main-content {
-  /* margin-top: 60px; */
-  margin-left: 200px;
-  padding: 20px;
-}
-
-.collapsed + .main-content {
-  margin-left: 60px;
-}
-.logoblock {
-  height: 89px;
-}
-
-.hrlogo {
-  margin: 30px 0px 0px 25px;
-}
-
-</style>
-<script>
-    $('.btn-expand-collapse').click(function(e) {
-				$('.navbar-primary').toggleClass('collapsed');
-    });
-</script>
-<script src="https://kit.fontawesome.com/3fec6e2397.js" crossorigin="anonymous"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
-<body>
-nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#">Santhosh Vertical Nav Project</a>
+  </style>
+  
+    <script>
+    window.console = window.console || function(t) {};
+  </script>
+  
+    
+    
+    <script>
+    if (document.location.search.match(/type=embed/gi)) {
+      window.parent.postMessage("resize", "*");
+    }
+  </script>
+  
+  
+  </head>
+  
+  <body translate="no">
+  <nav class="navbar-primary">
+    <div class="logoblock">
+        <img class="hrlogo" src = "images\AMG_2013_4C_logoHR.png">
+    </div>
+    <div class="btn-container">
+        <a href="#" class="btn-expand-collapse">
+          <i class="fa-sharp fa-solid fa-circle-chevron-right"></i>
+        </a>
+    </div>
+    <ul class="navbar-primary-menu">
+      <li>
+        <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Dashboard</span></a>
+        <a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">Campaigns</span></a>
+        <a href="#"><span class="glyphicon glyphicon-cog"></span><span class="nav-label">Submissions</span></a>
+        <a href="#"><span class="glyphicon glyphicon-film"></span><span class="nav-label">Users</span></a>
+        <a href="#"><span class="glyphicon glyphicon-calendar"></span><span class="nav-label">Custom Reports</span></a>
+      </li>
+    </ul>
+    <div class="userinfobox">
+      <a href="#" class="userinfoboxicon"><i class="fa-solid fa-circle-user"></i></a>
+      <div class="userinfotext">
+        <span class="userinfoitem userinfoname">Welcome Stephanie</span>
+      </br>
+      <span style ="padding: 0 13px 0 0; border-right: 1px solid black; margin: 0 13px 0 0;"><a href="#" class="userinfoitem">My Account</a></span> <a href="#" class="userinfoitem">Sign Out</a>
       </div>
-      <div id="navbar" class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-user navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Santhosh Giridara</a></li>
-          <li><a href="#about"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
-        </ul>
-      </div>/.nav-collapse
     </div>
   </nav>
-<nav class="navbar-primary">
-<a href="#" class="btn-expand-collapse"><span class="glyphicon glyphicon-menu-left"></span></a>
-<div class="logoblock">
-  <img class="hrlogo" src = "images\AMG_2013_4C_logoHR.png">
-</div>
-  <ul class="navbar-primary-menu">
-  <li>
-    <a href="#"><span class="glyphicon glyphicon-list-alt"></span><span class="nav-label">Dashboard</span></a>
-    <a href="#"><span class="glyphicon glyphicon-envelope"></span><span class="nav-label">Profile</span></a>
-    <a href="#"><span class="glyphicon glyphicon-cog"></span><span class="nav-label">Settings</span></a>
-    <a href="#"><span class="glyphicon glyphicon-film"></span><span class="nav-label">Notification</span></a>
-    <a href="#"><span class="glyphicon glyphicon-calendar"></span><span class="nav-label">Monitor</span></a>
-  </li>
-</ul>
-</nav>
-<div class="main-content">
-<h1> I am the main content </h1>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint assumenda quae aliquid voluptatibus quia, ea, ad natus magni repellat earum, culpa iure tempore. Enim dolor eaque minima voluptas ducimus?</p>
-</div>
-</body>
+  <div class="main-content">
+  <h1> I am the main content </h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem sint assumenda quae aliquid voluptatibus quia, ea, ad natus magni repellat earum, culpa iure tempore. Enim dolor eaque minima voluptas ducimus?</p>
+  </div>
+      <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script id="rendered-js">
+  $('.btn-expand-collapse').click(function (e) {
+    $('.navbar-primary').toggleClass('collapsed');
+  });
+
+      </script>
+  </body>
 </html>
